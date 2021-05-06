@@ -11,6 +11,7 @@ var bg ;
 
 function preload() {
     // create getBackgroundImg( ) here
+    console.log("hi");
     getBackgroundImg();
 }
 
@@ -42,7 +43,7 @@ function draw(){
 
 async function getBackgroundImg(){
 
-    var time = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
+    var time = await fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata")
     var format = await time.json();
     var datetime = format.datetime;
     gettime = datetime.slice(11,13);
